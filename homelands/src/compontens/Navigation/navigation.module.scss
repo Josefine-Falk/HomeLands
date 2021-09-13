@@ -1,0 +1,13 @@
+@import '../../styles//theme.scss';
+.nav_container{
+    background-color: $color-black;
+}
+
+li{
+    display: inline;
+    padding: 15px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}

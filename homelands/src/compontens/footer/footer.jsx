@@ -13,8 +13,10 @@ export function Footer() {
             <br />
             Telefon: +45 1122 3344
         </p>
+        <div>
         <img src={Twitter} alt="Twitter_logo" />
         <img src={Facebook} alt="Facebook_logo" />
+        </div>
         </section>
     )
 }

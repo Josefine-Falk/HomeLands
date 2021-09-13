@@ -7,8 +7,7 @@ export function Navigation() {
         <>
         <nav className={Style.nav_container}>
             <img className={Style.logo} src={Logo} alt="" />
-        <ul className={Style.nav_ul}>
-
+        <ul>
             <li>
                 <Link to="/Frontpage">Forside</Link>
             </li>

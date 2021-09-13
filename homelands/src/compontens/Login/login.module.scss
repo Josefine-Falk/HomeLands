@@ -1,28 +1,32 @@
+@import '../../styles//theme.scss';
+
 .loginbtn{
     border: none;
-    border-radius: 10px;
-    background-color: black;
-    color: green;
+    border-radius: 5px;
+    height: 20%;
+    background-color: $color-black;
+    color: white;
 }
 .logoutbtn{
     border: none;
-    border-radius: 10px;
-    background-color: green;
-    color: green;
+    border-radius:5px;
+    background-color: $color-black;
+    color: white;
 }
 
 input{
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     width: 30%;
     display: block;
-    background-color:green;
-    color: green;
+    background-color:white;
+    border: 1px solid $color-black;
+    color: white;
    
 }
 input::placeholder{
-    color: green;
+    color: $color-black;
 }
 .text_login{
     color: white;

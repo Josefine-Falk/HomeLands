@@ -3,7 +3,8 @@ import { Login } from "../../compontens/Login/login";
 export function LoginPage() {
     return(
         <>
-        <h1>Login</h1>
+        <h2>Login</h2>
+        <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
         <Login/>
         </>
     )

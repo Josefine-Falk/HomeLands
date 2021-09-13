@@ -4,7 +4,7 @@ import Style from './footer.module.scss';
 export function Footer() {
     return(
         <section className={Style.footer_container}>
-        <p>HomeLands</p>
+        <h2>HomeLands</h2>
         <p>Øster Uttrupvej 5
             <br />
             9000 Aalborg

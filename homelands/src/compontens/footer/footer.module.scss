@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+
 .footer_container{
     background-color: black;
     color: white;
     display: grid;
     grid-template-columns: 25% 20% 40% 25%;
+
+    h2{
+        font-family: "Odibee Sans";
+        font-size: 38px;
+        margin-left: 40px;
+    }
+    p{
+        margin-top: 30px;
+    }
+    img{
+        margin-top: 30px;
+    }
 }

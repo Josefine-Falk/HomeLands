@@ -1,0 +1,29 @@
+.loginbtn{
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: green;
+}
+.logoutbtn{
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: green;
+}
+
+input{
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 30%;
+    display: block;
+    background-color:green;
+    color: green;
+   
+}
+input::placeholder{
+    color: green;
+}
+.text_login{
+    color: white;
+}

@@ -14,31 +14,13 @@ export function Navigation() {
             </li>
 
             <li>
-                <Link to="/Sales">Salgs- og handelbetingelser</Link>
+                <Link to="/Boliger">Boliger til Salg</Link>
             </li>
 
-            <li className={Style.login_button}>
-                <Link to="/login">Login</Link>
-            </li>
-            <li><Link to="/products">Produkter</Link></li>&nbsp;
             <li>
-                <Link to="/shoppingcart">Shoppingcart</Link>
+                <Link to="/Login">Login</Link>
             </li>
-            <li>
-                <Link to="/comments">Kommentarer</Link>
-            </li>
-            <div>
-                <Link to="/payment"><img className={Style.cart_icon} src={cart_icon} alt="" /></Link>
-            </div>
 
-            <div className={Style.string_contact}>
-            <p>SALES@STRINGSONLINE.COM</p>
-            <p className={Style.phonenr}>+45 98 12 22 68</p>
-            </div>
-
-            <div className={Style.search}>
-                <input type="text" placeholder="Indtast søgeord" />
-            </div>
         </ul>
         </nav>
         </>

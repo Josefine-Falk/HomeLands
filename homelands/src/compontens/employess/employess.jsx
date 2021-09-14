@@ -25,6 +25,8 @@ export const Employees = () => {
                     <img className={Style.staff_img} src={item.image} alt="" />
                     <p>{item.firstname}{item.lastname}</p>
                     <p>{item.position}</p>
+                    <p>{item.email}</p>
+                    <p>{item.phone}</p>
                 </div>
                 </>
             )

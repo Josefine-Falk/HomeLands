@@ -66,6 +66,7 @@ export function Login() {
   
     return (
       <>
+      <section className={Style.container_login}>
       <form className={Style.loginform} onSubmit={handleSubmit(onSubmit)}>
       <h4>{loginData.username ? `Du er nu logget ind som ${loginData.username}` : message}</h4>
       <h5 className={Style.text_login}>Indtast brugernavn og adgangskode for at logge ind</h5>
@@ -82,6 +83,7 @@ export function Login() {
           <button onClick={() => {logOut()}} className={Style.logoutbtn}>Log ud</button>
           }
       </form>
+      </section>
       </>
     )
   }

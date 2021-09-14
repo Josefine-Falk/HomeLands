@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router";
+import { Switch, Route, Redirect } from "react-router";
 import { Boliger } from "../pages/Boliger/Boliger";
 import { FrontPage} from "../pages/FrontPage/FrontPage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
@@ -17,6 +17,9 @@ export function Routes() {
             <Route exact path="/login">
                 <LoginPage/>
             </Route>
+            <Route exact path=''>
+                <Redirect to='/Frontpage'/>
+            </Route>  
         </Switch>
     )
 }

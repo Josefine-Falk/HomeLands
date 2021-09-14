@@ -1,6 +1,17 @@
 @import '../../styles//theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
 .nav_container{
-    background-color: $color-black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url("../../assets//HEADER\ BG.png");
+    background-size: cover;
+    overflow: hidden;
+    height: 9rem;
+    font-family: "Odibee Sans";
+    img{
+        width: 30%;
+    }
 }
 
 li{
@@ -9,5 +20,6 @@ li{
     a{
         text-decoration: none;
         color: white;
+        font-size: 28px;
     }
 }

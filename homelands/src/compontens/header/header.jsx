@@ -1,31 +1,35 @@
-import { useEffect, useState } from "react"
-import { myCostumFetch } from "../../helpers/fetch";
-import Style from './header.module.scss';
+import Carousel from 'react-material-ui-carousel';
+export function HeaderSlider() {
 
-export const HeaderSlider = () => {
-    const [sliderData, setSliderData] = useState('');
-
-    const getSlider = async () => {
-        const url = 'https://api.mediehuset.net/homelands/images';
-        const result = await myCostumFetch(url)
-        setSliderData(result);
+    const carouselItems = [
+        {
+            url: 'https://api.mediehuset.net/images/homelands/medium/apartment-3.jpg',
+            alt: "bølgen_bolig"
+        }, 
+        {
+            url: 'https://api.mediehuset.net/images/homelands/medium/apartment-2.jpg',
+            alt: "bolig_lejligheder"
+        }
+    ]
+    function Item(props){
+        return(
+            <div style={{Height:"35vh"}}>
+                <img src={props.item.url} alt="" />
+            </div>
+        )
     }
-
-    useEffect(() => {
-        getSlider();
-    }, [])
-    console.log(sliderData);
-
     return(
         <>
-        <ul>{sliderData && sliderData.items.splice(0,3).map((item, key) => {
-            return(
-                <div key={key}>
-                    <img className={Style.header_img} src={item.image[1]} alt="" />
-                </div>
-            )
-        })}
-        </ul>
+        <Carousel animation="fade" interval="5000" indicators={false}>
+            {
+            carouselItems.map((item, index) => {
+                return(
+                    <Item key={index} item={item}/>
+                )
+            })
+            }
+        </Carousel>
         </>
     )
 }
+

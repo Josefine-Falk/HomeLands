@@ -19,7 +19,6 @@ export function Navigation() {
             <li>
                 <Link to="/Login">Login</Link>
             </li>
-
         </ul>
         </nav>
         </>

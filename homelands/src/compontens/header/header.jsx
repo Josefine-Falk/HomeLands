@@ -1,4 +1,5 @@
 import Carousel from 'react-material-ui-carousel';
+import Style from './header.module.scss';
 export function HeaderSlider() {
 
     const carouselItems = [
@@ -14,7 +15,7 @@ export function HeaderSlider() {
     function Item(props){
         return(
             <div style={{Height:"35vh"}}>
-                <img src={props.item.url} alt="" />
+                <img className={Style.header_img} src={props.item.url} alt="" />
             </div>
         )
     }

@@ -6,7 +6,6 @@ import Style from './FrontPage.module.scss';
 export function FrontPage() {
     return(
         <>
-        <h1>Forside</h1>
         <HeaderSlider/>
         <h3 className={Style.customers}>Det siger kunderne:</h3>
         <Review/>

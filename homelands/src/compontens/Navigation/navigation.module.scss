@@ -9,17 +9,25 @@
     overflow: hidden;
     height: 9rem;
     font-family: "Odibee Sans";
+    font-size: 28px;
     img{
-        width: 30%;
+        width: 35%;
+        margin-left: 13rem;
+        margin-top: 3rem;
+    }
+    ul{
+        display: flex;
+        list-style-type: none;
+        padding-left: 11rem;
+        li{
+            display: inline;
+            padding: 15px;
+        a{
+            text-decoration: none;
+            color: $color-white;
+            margin-right: 25px;
+        }
+        }
     }
 }
 
-li{
-    display: inline;
-    padding: 15px;
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: 28px;
-    }
-}

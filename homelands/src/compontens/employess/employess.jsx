@@ -21,13 +21,15 @@ export const Employees = () => {
         <section className={Style.container_staff}>{staffData && staffData.items.map((item, key) => {
             return(
                 <>
-                <div key={key}>
+                <figcaption>
                     <img className={Style.staff_img} src={item.image} alt="" />
-                    <p>{item.firstname} {item.lastname}</p>
-                    <p>{item.position}</p>
+                    <figcaption>
+                        <h3>{item.firstname} {item.lastname}</h3>
+                        <p>{item.position}</p>
+                    </figcaption>
                     <p>{item.email}</p>
                     <p>{item.phone}</p>
-                </div>
+                </figcaption>
                 </>
             )
         })}

@@ -1,0 +1,10 @@
+@import '../../styles/theme.scss';
+
+.review_section{
+    background-color: $color-rosa;
+    text-align: center;
+    height: 228px;
+    .review_text{
+        padding-top: 60px;
+    }
+}

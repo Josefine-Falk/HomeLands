@@ -10,6 +10,7 @@ export const HeaderSlider = () => {
         const result = await myCostumFetch(url)
         setSliderData(result);
     }
+
     useEffect(() => {
         getSlider();
     }, [])
@@ -20,8 +21,7 @@ export const HeaderSlider = () => {
         <ul>{sliderData && sliderData.items.splice(0,3).map((item, key) => {
             return(
                 <div key={key}>
-                    <img className={Style.header_img} src={item.image} alt="" />
-                    <p>{item.description}</p>
+                    <img className={Style.header_img} src={item.image[1]} alt="" />
                 </div>
             )
         })}

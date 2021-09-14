@@ -1,0 +1,35 @@
+import { useEffect, useState } from "react"
+import { myCostumFetch } from "../../helpers/fetch";
+import Style from './anmeldelser.module.scss';
+
+
+export const Review = () => {
+    const [reviewData, setReviewData] = useState('');
+
+    const getReview = async () => {
+        const url = 'https://api.mediehuset.net/homelands/reviews';
+        const result = await myCostumFetch(url)
+        setReviewData(result);
+    }
+    
+    useEffect(() => {
+        getReview();
+    }, [])
+    console.log(reviewData);
+
+    return(
+        <>
+        <section className={Style.review_section}>{reviewData && reviewData.items.splice(0,2).map((item, key) => {
+            return(
+                <div key={key}>
+                    <h2 className={Style.review_text}>{item.title}</h2>
+                    <p>"{item.content}"</p>
+                    <p>{item.user.firstname}{item.user.lastname}</p>
+                </div>
+            )
+        })}
+            
+        </section>
+        </>
+    )
+}

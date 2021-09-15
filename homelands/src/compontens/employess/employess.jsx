@@ -24,12 +24,15 @@ export const Employees = () => {
                 <>
                 <figure className={Style.img_container}>
                     <img className={Style.staff_img} src={item.image} alt="" />
-                    <figcaption>
                         <h3>{item.firstname} {item.lastname}</h3>
                         <p>{item.position}</p>
-                    </figcaption>
+
+                    
+                 <figcaption>
                     <p>{item.email}</p>
                     <p>{item.phone}</p>
+                     </figcaption>
+
                 </figure>
                 </>
             )

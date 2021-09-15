@@ -51,12 +51,13 @@ export const Houses = () => {
             </Route>
 
             <Route exact path="/Boliger/:id">
-                <section>
+                <div>
                     {detailsData && detailsData.items.map((item, key) => {
                         return(
                             <>
                             <Link to={`/Boliger/${id}/${item.id}`}>
                             <div key={key}>
+                                <img src={item.images[0].filename.large} alt="" />
                                 <p>Sagsnr. </p>
                                 <p>Boligareal </p>
                                 <p>Grundareal</p>
@@ -79,7 +80,7 @@ export const Houses = () => {
                             </>
                         );
                     })}
-                </section>
+                </div>
             </Route>
         </Switch>
     )

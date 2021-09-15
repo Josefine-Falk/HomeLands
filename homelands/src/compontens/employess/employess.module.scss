@@ -1,7 +1,9 @@
 .container_staff{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    
     .staff_img{
-    height: 394px;
+    height: 294px;
     }
+   
 }

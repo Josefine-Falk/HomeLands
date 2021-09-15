@@ -1,14 +1,17 @@
 .container_houseview{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    
+    grid-template-columns: repeat(3,1fr); 
     .img_houses{
     height: 187px;
     width: 382px;
+    margin-left: 2%;
+    margin-top: 8%;
     }
     .content_container{
         margin: 10%;
         border: 1px solid #707070;
-
+        width: 400px;
+        height: 380px;
+        background-color: #f1f0f0;
     }
 }

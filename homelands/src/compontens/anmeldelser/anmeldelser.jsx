@@ -19,7 +19,7 @@ export const Review = () => {
 
     return(
         <>
-        <section className={Style.review_section}>{reviewData && reviewData.items.splice(0,2).map((item, key) => {
+        <section className={Style.review_section}>{reviewData && reviewData.items.splice(0,1).map((item, key) => {
             return(
                 <div key={key}>
                     <h3 className={Style.review_text}>{item.title}</h3>

@@ -19,7 +19,7 @@ export const HouseView = () => {
         <>
         <section className={Style.container_houseview}>{houseData && houseData.items.splice(0,3).map((item, key) => {
             return(
-                <div key={key}>
+                <div className={Style.content_container} key={key}>
                     <img className={Style.img_houses} src={item.images[0].filename.medium} alt="" />
                     <p>{item.address}</p>
                     <p>{item.zipcode} {item.city}</p>

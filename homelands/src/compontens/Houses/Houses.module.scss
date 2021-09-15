@@ -1,4 +1,6 @@
 .houses_container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    .houses_img{
+        width: 400px;
+        height: 187px;
+    }
 }

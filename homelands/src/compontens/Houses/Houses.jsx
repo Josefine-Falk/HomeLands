@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, useParams, Switch} from 'react-router';
 import {Link} from "react-router-dom";
 import { myCostumFetch } from "../../helpers/fetch";
+import Style from './Houses.module.scss';
 
 export const Houses = () => {
     const [housesData, setHousesData] = useState('');
@@ -35,13 +36,13 @@ export const Houses = () => {
                         return(
                             <>
                             <Link to={`Boliger/${item.id}`}>
-                                <div key={key}>
-                                    <img src={item.images[0].filename.medium} alt="" />
+                                <section className={Style.houses_container} key={key}>
+                                    <img className={Style.houses_img} src={item.images[0].filename.medium} alt="" />
                                     <p>{item.address}</p>
                                     <p>{item.zipcode} {item.city}</p>
                                     <p>{item.type}</p>
                                     <p>{item.energy_label_name} {item.num_rooms}, {item.floor_space}m2 {item.price}DKK</p>
-                                </div>
+                                </section>
                             </Link>
                             </>
                         )

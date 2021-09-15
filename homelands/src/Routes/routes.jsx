@@ -14,6 +14,10 @@ export function Routes() {
                 <Boliger/>
             </Route>
 
+            <Route exact path="/Boliger/:id">
+                <Boliger/>
+            </Route>
+
             <Route exact path="/login">
                 <LoginPage/>
             </Route>

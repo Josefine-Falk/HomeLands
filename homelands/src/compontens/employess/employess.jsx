@@ -16,6 +16,7 @@ export const Employees = () => {
     }, [])
     console.log(staffData);
 
+
     return(
         <>
         <section className={Style.container_staff}>{staffData && staffData.items.map((item, key) => {

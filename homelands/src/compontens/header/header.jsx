@@ -10,11 +10,15 @@ export function HeaderSlider() {
         {
             url: 'https://api.mediehuset.net/images/homelands/medium/apartment-2.jpg',
             alt: "bolig_lejligheder"
+        },
+        {
+            url: 'https://api.mediehuset.net/images/homelands/medium/house-3.jpg',
+            alt: "bolig_villa"
         }
     ]
     function Item(props){
         return(
-            <div style={{Height:"35vh"}}>
+            <div>
                 <img className={Style.header_img} src={props.item.url} alt="" />
             </div>
         )

@@ -25,8 +25,10 @@ export const HousesDetails = () => {
                     {detailsData.item ? (
                         
                             <>
-                            <div className={Style.HousesDetails}>
+                            <main className={Style.HousesDetails}>
                                 <img src={detailsData.item.images[0].filename.large} alt="" />
+                                
+                                <div className={Style.houses_details}>
                                 <p>{detailsData.item.id}Sagsnr. </p>
                                 <p>{detailsData.item.floor_space}Boligareal </p>
                                 <p>{detailsData.item.ground_space}Grundareal</p>
@@ -44,7 +46,8 @@ export const HousesDetails = () => {
                                 <p>Brutto ex. ejerudfigt</p>
                                 <p>Netto ex. ejerudfigt</p>
                                 <p>Ejerudfigt</p>
-                            </div>
+                                </div>
+                            </main>
                             </>
                     ): ( 
                         <p>No houses found</p>

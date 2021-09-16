@@ -8,7 +8,7 @@ export const CommentsList = (props) => {
     const id = props.itemId;
 
     const getData = async () => {
-        const url = `https://api.mediehuset.net/homelands/reviews/${id}`
+        const url = `https://api.mediehuset.net/homelands/reviews`
         const options = {
             method: 'GET',
             headers: {

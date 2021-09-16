@@ -1,5 +1,5 @@
 import { useParams } from "react-router"
-import { CommentsForm } from "./CommentsForm";
+import { CommentsForm} from "./CommentsForm";
 import { CommentsList } from "./CommentsList";
 
 export const Comments = () => {

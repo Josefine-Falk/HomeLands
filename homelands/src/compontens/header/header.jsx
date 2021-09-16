@@ -18,7 +18,7 @@ export function HeaderSlider() {
     ]
     function Item(props){
         return(
-            <div>
+            <div className={Style.container}>
                 <img className={Style.header_img} src={props.item.url} alt="" />
             </div>
         )

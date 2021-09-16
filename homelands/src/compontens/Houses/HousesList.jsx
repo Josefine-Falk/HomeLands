@@ -23,7 +23,7 @@ export const HousesList = () => {
                 return(
                     <>
                     <Link to={`Boliger/${item.id}`}>
-                        <main >
+                        <main className={Style.container_list} >
                             <img className={Style.houses_img} src={item.images[0].filename.medium} alt="" />
                             <p>{item.address}</p>
                             <p>{item.zipcode} {item.city}</p>

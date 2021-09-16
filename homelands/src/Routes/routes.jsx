@@ -1,7 +1,6 @@
 import { Switch, Route, Redirect } from "react-router";
 import { Comments } from "../compontens/comments/Comments";
 import { HousesDetails } from "../compontens/Houses/HousesDetails";
-import { HousesList } from "../compontens/Houses/HousesList";
 import { Boliger } from "../pages/Boliger/Boliger";
 import { FrontPage} from "../pages/FrontPage/FrontPage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
@@ -28,6 +27,7 @@ export function Routes() {
             <Route>
                 <Comments/>
             </Route>
+            
             <Route exact path=''>
                 <Redirect to='/Frontpage'/>
             </Route>

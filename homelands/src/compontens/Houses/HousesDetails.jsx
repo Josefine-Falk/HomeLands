@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import {useParams} from 'react-router';
 import { myCostumFetch } from "../../helpers/fetch";
-import {Link} from 'react-router-dom';
 import Style from './housesdetail.module.scss';
+import Like from '../../assets/Like.png';
+import Card from '../../assets/House Detail Card.png';
+import Foto from '../../assets/House Detail Foto.png';
+import Plan from '../../assets/House Detail Plan.png';
 
 export const HousesDetails = () => {
     const [detailsData, setHousesData_details] = useState('');
@@ -23,31 +26,62 @@ export const HousesDetails = () => {
         <section>
             <div>
                     {detailsData.item ? (
-                        
                             <>
-                            <main className={Style.HousesDetails}>
-                                <img src={detailsData.item.images[0].filename.large} alt="" />
+                            <main className={Style.HousesImg}>
+                                <img className={Style.images} src={detailsData.item.images[0].filename.large} alt="" />
                                 
-                                <div className={Style.houses_details}>
-                                <p>{detailsData.item.id}Sagsnr. </p>
-                                <p>{detailsData.item.floor_space}Boligareal </p>
-                                <p>{detailsData.item.ground_space}Grundareal</p>
-                                <p>{detailsData.item.num_rooms}Antal rum</p>
-                                <p>{detailsData.item.num_floors}Antal plan</p>
+                                <div className={Style.container_info}>
+                                <div>
+                                <p>{detailsData.item.address}</p>
+                                <p>{detailsData.item.zipcode} {detailsData.item.city}</p>
+                                <p>{detailsData.item.type}</p>
+                                <p>{detailsData.item.num_rooms}, {detailsData.item.floor_space}m2</p>
+                                </div>
+                                <div className={Style.icons}>
+                                <img src={Like} alt="" />
+                                <img src={Card} alt="" />
+                                <img src={Foto} alt="" />
+                                <img src={Plan} alt="" />
+                                </div>
+                                <div>
+                                <p>Kontantpris {detailsData.item.price}</p>
+                                <p>Udbetaling {detailsData.item.payout}</p>
+                                <p>Ejerudgift {detailsData.item.cost}</p>
+                                </div>
+                                </div>
 
-                                <p>{detailsData.item.basement_space}Kælder</p>
-                                <p>{detailsData.item.year_construction}Byggeår</p>
-                                <p>{detailsData.item.year_rebuilt}Ombygget</p>
-                                <p>{detailsData.item.energy_label_name}Energimærke</p>
-                                <p>Liggetid</p>
+                                <section className={Style.houses_details}>
+                               
+                                <div>
+                                <p>Sagsnr. {detailsData.item.id}</p>
+                                <p>Boligareal {detailsData.item.floor_space}</p>
+                                <p>Grundareal {detailsData.item.ground_space}</p>
+                                <p>Antal rum {detailsData.item.num_rooms}</p>
+                                <p>Antal plan {detailsData.item.num_floors}</p>
+                                </div>
 
-                                <p>Kontantpris</p>
-                                <p>Udbetaling</p>
-                                <p>Brutto ex. ejerudfigt</p>
-                                <p>Netto ex. ejerudfigt</p>
-                                <p>Ejerudfigt</p>
+                                <div>
+                                <p>Kælder {detailsData.item.basement_space}</p>
+                                <p>Byggeår {detailsData.item.year_construction}</p>
+                                <p>Ombygget {detailsData.item.year_rebuilt}</p>
+                                <p>Energimærke {detailsData.item.energy_label_name}</p>
+                                <p>Liggetid {detailsData.item.date_friendly}</p>
+                                </div>
+
+                                <div>
+                                <p>Kontantpris {detailsData.item.price}</p>
+                                <p>Udbetaling {detailsData.item.payout}</p>
+                                <p>Brutto ex. ejerudgift {detailsData.item.gross}</p>
+                                <p>Netto ex. ejerudgift {detailsData.item.net}</p>
+                                <p>Ejerudfigt {detailsData.item.cost}</p>
+                                </div>
+                                </section>
+
+                                <div className={Style.details_text}>
+                                    {detailsData.item.description}
                                 </div>
                             </main>
+                            
                             </>
                     ): ( 
                         <p>No houses found</p>

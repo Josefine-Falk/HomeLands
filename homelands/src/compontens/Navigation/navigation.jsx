@@ -6,7 +6,7 @@ export function Navigation() {
     return(
         <>
         <nav className={Style.nav_container}>
-            <img className={Style.logo} src={Logo} alt="" />
+            <Link to="/Frontpage"><img className={Style.logo} src={Logo} alt="" /></Link>
         <ul>
             <li>
                 <Link to="/Frontpage">Forside</Link>

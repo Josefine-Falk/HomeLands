@@ -6,10 +6,7 @@
     color: white;
     display: grid;
     grid-template-columns: 25% 20% 40% 15%;
-    // position: fixed;
-    // width: 100%;
-    // left: 0;
-    // bottom: 0;
+   
 
     h2{
         font-family: "Odibee Sans";
@@ -22,5 +19,22 @@
     img{
         margin-top: 30px;
         margin-right: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        h2{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        p{
+            font-size: 10px;
+            margin-left: 20px;
+        }
+        img{
+            margin-left: 20px;
+        }
     }
 }

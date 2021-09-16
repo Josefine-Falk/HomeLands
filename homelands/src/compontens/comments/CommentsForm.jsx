@@ -3,6 +3,7 @@ import {useForm} from 'react-hook-form';
 import { myCostumFetch } from "../../helpers/fetch";
 import { AuthContext } from "../Login/AuthProvider";
 import {useHistory} from 'react-router';
+import Style from './comments.module.scss';
 
 export const CommentsForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -48,6 +49,8 @@ export const CommentsForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}>
+                <section className={Style.comments_container}>
+                <main className={Style.comments_form}>
                 <div>
                     <label htmlFor="title">Titel:</label>
                     <input className="required" type="text" name="title" {...register('title', { required: true })} />
@@ -61,6 +64,8 @@ export const CommentsForm = () => {
                 <div>
                     <button type="submit">Send</button>
                 </div>
+                </main>
+                </section>
             </form>
         </>
     )

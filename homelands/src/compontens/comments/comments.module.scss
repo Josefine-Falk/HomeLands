@@ -1,9 +1,15 @@
-.comments_container{
-    height: 360px;
-    input{
-        color: black;
-        position: relative;
-        bottom: 10px;
-        margin: 15px;
+.commentsList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    li{
+        font-weight: bold;
     }
 }
+.comments_container{
+      
+    .comments_form{
+        width: 50px;
+        margin-left: 40%;
+}
+}
+

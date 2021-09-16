@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { myCostumFetch } from "../../helpers/fetch"
 import { AuthContext } from "../Login/AuthProvider"
+import Style from './comments.module.scss';
 
 export const CommentsList = (props) => {
     const [apiData, setApiData] = useState()
@@ -35,7 +36,14 @@ export const CommentsList = (props) => {
         <ul>
             {apiData && apiData.items.map((item, key) => {
                 return(
+                    <>
+                    <main className={Style.commentsList}>
+                     <div className={Style.commenttext}>
                     <li key={key}>{item.title}</li>
+                    <p>{item.content}</p>
+                    </div>
+                    </main>
+                    </>
                 )
             })}
         </ul>

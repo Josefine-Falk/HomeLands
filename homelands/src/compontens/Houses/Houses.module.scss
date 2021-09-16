@@ -6,3 +6,13 @@
         height: 187px;
     }
 }
+@media screen and (max-width: 600px) {
+    .houses_list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .houses_img{
+            width: 100%;
+        }
+    }
+    
+}

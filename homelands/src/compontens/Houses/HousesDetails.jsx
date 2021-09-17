@@ -6,6 +6,7 @@ import Like from '../../assets/Like.png';
 import Card from '../../assets/House Detail Card.png';
 import Foto from '../../assets/House Detail Foto.png';
 import Plan from '../../assets/House Detail Plan.png';
+import {Link } from 'react-router-dom'
 
 //Errorfunction til HouseDetails
 export const HousesDetails = () => {
@@ -45,7 +46,6 @@ export const HousesDetails = () => {
                                 <img src={Card} alt="" />
                                 <img src={Foto} alt="" />
                                 <img src={Plan} alt="" />
-                                
                                 </div>
 
                                 <div>

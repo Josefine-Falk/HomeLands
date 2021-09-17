@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { myCostumFetch } from "../../helpers/fetch";
 import Style from './anmeldelser.module.scss';
 
-
+//Henter anmeldelser ud
 export const Review = () => {
     const [reviewData, setReviewData] = useState('');
 

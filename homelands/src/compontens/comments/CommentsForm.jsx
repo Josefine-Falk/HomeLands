@@ -5,6 +5,9 @@ import { AuthContext } from "../Login/AuthProvider";
 import {useHistory} from 'react-router';
 import Style from './comments.module.scss';
 
+//Commentsform = form til at skrive kommentar
+
+
 export const CommentsForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { loginData } = useContext(AuthContext)
@@ -20,16 +23,17 @@ export const CommentsForm = () => {
         formData.append('active', true)
         formData.append('num_stars', 1)
 
+        //Variabel med url, til at hente url, method som POST til at poste kommentarer
         const url = `https://api.mediehuset.net/homelands/reviews`;
         const options = {
             method: 'POST',
             headers: {
-                'Authorization': `Baerer ${loginData.access_token}`
+                'Authorization': `Baerer ${loginData.access_token}` //Man skal være logget ind få kommentarer
             },
             body: formData
         }
         try {
-            const result = await myCostumFetch(url, options);
+            const result = await myCostumFetch(url, options); //Venter på fetch function har kørt url 
             console.log(result)
             resetInputs();
             resetSite();

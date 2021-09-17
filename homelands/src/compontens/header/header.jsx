@@ -1,8 +1,10 @@
 import Carousel from 'react-material-ui-carousel';
 import Style from './header.module.scss';
-export function HeaderSlider() {
 
-    const carouselItems = [
+
+//Function til min slider på forsiden
+export function HeaderSlider() {
+    const carouselItems = [ //array med de 3 billeder jeg skal have med i slidshowet 
         {
             url: 'https://api.mediehuset.net/images/homelands/medium/apartment-3.jpg',
             alt: "bølgen_bolig"
@@ -16,6 +18,7 @@ export function HeaderSlider() {
             alt: "bolig_villa"
         }
     ]
+    
     function Item(props){
         return(
             <div className={Style.container}>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Style from './navigation.module.scss';
 
 export function Navigation() {
+    
     return(
         <>
         <nav className={Style.nav_container}>
@@ -19,6 +20,7 @@ export function Navigation() {
             <li>
                 <Link to="/Login">Login</Link>
             </li>
+            
         </ul>
         </nav>
         </>

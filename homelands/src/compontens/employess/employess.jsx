@@ -2,17 +2,18 @@ import { useEffect, useState } from "react"
 import { myCostumFetch } from "../../helpers/fetch";
 import Style from './employess.module.scss';
 
+//Variabel og errorfunction til at hentet ansatte ud
 export const Employees = () => {
-    const [staffData, setStaffData] = useState('');
+    const [staffData, setStaffData] = useState('');//Opretter en variabel til staff
 
-    const getStaff = async () => {
+    const getStaff = async () => { //Henter url og køre den igennem mycustumfetch
         const url = 'https://api.mediehuset.net/homelands/staff';
         const result = await myCostumFetch(url)
         setStaffData(result);
     }
 
     useEffect(() => {
-        getStaff();
+        getStaff();//Viser ansatte fra getStaff
     }, [])
     console.log(staffData);
 

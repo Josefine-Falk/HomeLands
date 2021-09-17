@@ -7,13 +7,15 @@ import Card from '../../assets/House Detail Card.png';
 import Foto from '../../assets/House Detail Foto.png';
 import Plan from '../../assets/House Detail Plan.png';
 
+//Errorfunction til HouseDetails
 export const HousesDetails = () => {
     const [detailsData, setHousesData_details] = useState('');
     
+    //Variabel med id til husene 
     const {id} = useParams()
 
     const getDetails = async () => {
-        const url = `https://api.mediehuset.net/homelands/homes/${id}`;
+        const url = `https://api.mediehuset.net/homelands/homes/${id}`;//url adressen med id til huse
         const result = await myCostumFetch(url)
         setHousesData_details(result);
     }
@@ -25,7 +27,7 @@ export const HousesDetails = () => {
     return(
         <section>
             <div>
-                    {detailsData.item ? (
+                     {detailsData.item ? (  /*Henter data ud hvis de findes, hvis ikke den kan hente det ud skriver den Ingen informationer blevet fundet */
                             <>
                             <main className={Style.HousesImg}>
                                 <img className={Style.images} src={detailsData.item.images[0].filename.large} alt="" />
@@ -37,12 +39,15 @@ export const HousesDetails = () => {
                                 <p>{detailsData.item.type}</p>
                                 <p>{detailsData.item.num_rooms}, {detailsData.item.floor_space}m2</p>
                                 </div>
+
                                 <div className={Style.icons}>
                                 <img src={Like} alt="" />
                                 <img src={Card} alt="" />
                                 <img src={Foto} alt="" />
                                 <img src={Plan} alt="" />
+                                
                                 </div>
+
                                 <div>
                                 <p>Kontantpris {detailsData.item.price}</p>
                                 <p>Udbetaling {detailsData.item.payout}</p>
@@ -78,13 +83,24 @@ export const HousesDetails = () => {
                                 </section>
 
                                 <div className={Style.details_text}>
-                                    {detailsData.item.description}
+                                    <p>{detailsData.item.description}</p>
+                                    
                                 </div>
+
+                                <section className={Style.contact_details}>
+                                    <h4>Kontakt</h4>
+                                    <img src={detailsData.item.staff.image} alt="" />
+                                    <p>{detailsData.item.staff.firstname} {detailsData.item.staff.lastname}</p>
+                                    <p>{detailsData.item.staff.position}</p>
+                                    <p>Mobil: {detailsData.item.staff.phone}</p>
+                                    <p>Email: {detailsData.item.staff.email}</p>
+
+                                </section>
                             </main>
                             
                             </>
                     ): ( 
-                        <p>No houses found</p>
+                        <p>Ingen informationer blev fundet</p>
                     )}
                 </div>
         </section>

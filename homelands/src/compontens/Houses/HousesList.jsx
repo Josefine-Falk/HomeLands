@@ -3,10 +3,11 @@ import { myCostumFetch } from "../../helpers/fetch";
 import {Link} from 'react-router-dom';
 import Style from './Houses.module.scss';
 
+//Errorfunction og variabel med HousesList
 export const HousesList = () => {
     const [housesData, setHousesData] = useState('');
 
-    const getHouses = async () => {
+    const getHouses = async () => { //Henter url ind med homes 
         const url = 'https:api.mediehuset.net/homelands/homes';
         const result = await myCostumFetch(url)
         setHousesData(result);

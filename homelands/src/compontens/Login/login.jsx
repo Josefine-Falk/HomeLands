@@ -6,22 +6,24 @@ import { myCostumFetch } from '../../helpers/fetch';
 export const Login = () => {
   const { loginData, setLoginData } = useContext(AuthContext)
   const onSubmit = (data) => sendLoginRequest(data)
-  const { register, handleSubmit, formState: { errors }} = useForm()
-  const [message, setMessage] = useState('');
+  const { register, handleSubmit, formState: { errors }} = useForm() //Register om man har indtaste ting i input feltet linje 57 og 61
+  const [message, setMessage] = useState(''); //Variabel til message som bliver brugt fra linje 30-37
 
+  //Hvilke data man skal bruge, i det her tilfælde har jeg sat username og password
   const sendLoginRequest = async (data, e) => {
       const formdata = new FormData()
       formdata.append('username', data.username)
       formdata.append('password', data.password)
 
+      //Options det er en post, da man skal hente token
       const options = {
           method: 'POST',
           body: formdata
       }
-
+      //Function som henter url
       const url = "https://api.mediehuset.net/token"
-      const result = await myCostumFetch(url, options)   
-      //console.log(result);
+      const result = await myCostumFetch(url, options) //venter på min fetch har hentet url og options
+      console.log(result);
       handleSessionData(result)
   }
 
@@ -33,12 +35,12 @@ export const Login = () => {
           setMessage('Fandt ingen match på brugernavn eller adgangskode')
       }
   }    
-
+  //Function til logout som register man er logget ud
   const logOut = () => {
       setLoginData([])
       sessionStorage.removeItem('token')
       setMessage('Du er nu logget ud')
-
+    //Variabel Timer som clear siden når man er logget ud 
       let timer = setTimeout(() => {
           setMessage('Indtast login oplysninger')
           clearTimeout(timer)
@@ -47,7 +49,6 @@ export const Login = () => {
 
   return (
     <>
-      <h1>Login</h1>
           <p>{message}</p>
           {!loginData && !loginData.username ?  
               <form onSubmit={handleSubmit(onSubmit)}>

@@ -2,11 +2,12 @@ import { useEffect, useState } from "react"
 import { myCostumFetch } from "../../helpers/fetch";
 import Style from './housefrontpage.module.scss';
 
+//Errorfunction og variabel til at vise de 3 huse på forsiden
 export const HouseView = () => {
     const [houseData, setHouseData] = useState('');
 
-    const getHouseView = async () => {
-        const url = 'https://api.mediehuset.net/homelands/homes';
+    const getHouseView = async () => { //Variabel med hent huse ud
+        const url = 'https://api.mediehuset.net/homelands/homes'; 
         const result = await myCostumFetch(url)
         setHouseData(result);
     }

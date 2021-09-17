@@ -21,7 +21,6 @@ export const CommentsForm = () => {
         formData.append('content', data.content)
         formData.append('user_id', data.user_id)
         formData.append('active', true)
-        formData.append('num_stars', 1)
 
         //Variabel med url, til at hente url, method som POST til at poste kommentarer
         const url = `https://api.mediehuset.net/homelands/reviews`;

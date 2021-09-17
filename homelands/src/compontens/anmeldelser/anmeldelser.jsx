@@ -21,7 +21,7 @@ export const Review = () => {
         <>
         <section className={Style.review_section}>{reviewData && reviewData.items.splice(0,1).map((item, key) => {
             return(
-                <div key={key}>
+                <div className={Style.review} key={key}>
                     <h3 className={Style.review_text}>{item.title}</h3>
                     <p>"{item.content}"</p>
                     <p className={Style.customer_info}>{item.user.firstname} {item.user.lastname}</p>

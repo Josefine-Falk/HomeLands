@@ -53,7 +53,7 @@ export const ReviewDelete = (props) => {
     }
 
     return(
-        <section>
+        <section className={Style.container}>
             <div>
                 <h2>Dine anmeldelser</h2>
             </div>

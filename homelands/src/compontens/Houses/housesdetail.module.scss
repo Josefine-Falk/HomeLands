@@ -34,3 +34,8 @@
         height: 200px;
     }
 }
+@media screen and (max-width: 600px) {
+    .contact_details{
+        padding-left: 50%;
+    }
+}

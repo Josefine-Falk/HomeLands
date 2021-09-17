@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from './AuthProvider';
 import { myCostumFetch } from '../../helpers/fetch';
 
+
 export const Login = () => {
   const { loginData, setLoginData } = useContext(AuthContext)
   const onSubmit = (data) => sendLoginRequest(data)
@@ -49,6 +50,7 @@ export const Login = () => {
 
   return (
     <>
+    <section >
           <p>{message}</p>
           {!loginData && !loginData.username ?  
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -70,7 +72,8 @@ export const Login = () => {
               <p>Du er logget ind som {loginData.username}</p>
               <button onClick={() => {logOut()}}>Log ud</button>
           </form>
-          }       
+          }  
+          </section>     
       </>
   )
 }
